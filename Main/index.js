@@ -15,6 +15,7 @@ console.log('Welcome to Team Generator!');
 
 addTeamMember('Manager');
 
+// Function that prompts the user to create their list of team members
 function addTeamMember(role){
     // Array of questions for the prompt function to run through
     const arrayQuestions = [
@@ -22,35 +23,40 @@ function addTeamMember(role){
             type: 'input',
             name: 'name',
             message: 'What is the employee\'s name?',
+            validate: checkInput
         },
         {
             type: 'input',
             name: 'id',
-            message: 'What is the employee\'s work ID number?'
+            message: 'What is the employee\'s work ID number?',
+            validate: checkInput
         },
         {
             type: 'input',
             name: 'email',
             message: 'What is the employee\'s email address?',
-            validate: checkValidate
+            validate: checkEmail
         },
         {
             type: 'input',
             name: 'officeNumber',
             message: 'What is the manager\'s office number?',
-            when: role === 'Manager'
+            when: role === 'Manager',
+            validate: checkInput
         },
         {
             type: 'input',
             name: 'github',
             message: 'What is the engineer\'s github username?',
-            when: role === 'Engineer'
+            when: role === 'Engineer',
+            validate: checkInput
         },
         {
             type: 'input',
             name: 'school',
             message: 'What is the intern\'s school name?',
-            when: role === 'Intern'
+            when: role === 'Intern',
+            validate: checkInput
         }
     ];
 
@@ -115,9 +121,19 @@ function runAgain(){
     ]);
 }
 
-function checkValidate(input){
+// Check to see if the email response has an @ or .
+function checkEmail(input){
     if(!input.includes('@') || !input.includes('.')){
         return 'Please input a valid email...';
+    }
+    
+    return true;
+}
+
+// Check to see if the user put in a response
+function checkInput(input){
+    if(input.length === 0){
+        return 'Please input a valid response...';
     }
     
     return true;

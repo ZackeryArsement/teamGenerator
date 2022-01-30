@@ -55,4 +55,4 @@ describe("Employee", () => {
             expect(obj.getRole()).toEqual(role);
         });
     });
-})
+});

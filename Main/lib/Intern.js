@@ -8,7 +8,7 @@ class Intern extends Employee{
     }
 
     getSchool(){
-        return this.resource;
+        return this.school;
     }
 
     getRole(){
