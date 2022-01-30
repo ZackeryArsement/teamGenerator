@@ -1,5 +1,55 @@
 // This script is used for creating our HTML string
 
+// Use the teamMember array to create cards to put into the page HTML
+function cardHTML(teamMembers) {
+    // For every Class constructor in the 'teamMember' array we want to create a new card with that member's information
+    return teamMembers.map(member => {
+        // We change the last listed data parameter depending on the role of the employee
+        switch(member.role){
+            case 'Manager':
+                return `<div class="card bg-primary m-2" style="width: 18rem;">
+                    <div class="card-body text-white">
+                        <h2 class="card-title">${member.name}</h2>
+                        <h3 class="card-subtitle">${member.role}</h3>
+                    </div>
+                    <ul class="list-group list-group-flush m-2 rounded">
+                        <li class="list-group-item">ID: ${member.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${member.email}">${member.email}</a></li>
+                        <li class="list-group-item">Office #: ${member.officeNumber}</li>
+                    </ul>
+                </div>`;
+            case 'Intern':
+                return `<div class="card bg-primary m-2" style="width: 18rem;">
+                    <div class="card-body text-white">
+                        <h2 class="card-title">${member.name}</h2>
+                        <h3 class="card-subtitle">${member.role}</h3>
+                    </div>
+                    <ul class="list-group list-group-flush m-2 rounded">
+                        <li class="list-group-item">ID: ${member.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${member.email}">${member.email}</a></li>
+                        <li class="list-group-item">School: ${member.school}</li>
+                    </ul>
+                </div>`;
+            case 'Engineer':
+                return `<div class="card bg-primary m-2" style="width: 18rem;">
+                    <div class="card-body text-white">
+                        <h2 class="card-title">${member.name}</h2>
+                        <h3 class="card-subtitle">${member.role}</h3>
+                    </div>
+                    <ul class="list-group list-group-flush m-2 rounded">
+                        <li class="list-group-item">ID: ${member.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${member.email}">${member.email}</a></li>
+                        <li class="list-group-item">Github: <a href="https://github.com/${member.github}" target="_blank">${member.github}</a></li>
+                    </ul>
+                </div>`;
+        }
+    }
+
+    )
+    // After the card HTMLs have been put into an array we want to turn this array into one string, so we can put that string into our HTML page
+    .join('');
+}
+
 const pageHTML = (cardHTML) => {
     return `<!DOCTYPE html>
     <html lang="en">
@@ -26,4 +76,4 @@ const pageHTML = (cardHTML) => {
     </html>`
 };
 
-module.exports = pageHTML;
+module.exports = {pageHTML, cardHTML};
