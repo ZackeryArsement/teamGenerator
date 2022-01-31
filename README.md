@@ -8,10 +8,10 @@ Built with: HTML, Javascript, Bootstrap, Jquery, Node.js
 
 # Table of Contents
 
--[Summary](#summary)
--[Development](#development)
--[Test](#test)
--[Resources](#resources)
+-[Summary](#summary)\
+-[Development](#development)\
+-[Test](#test)\
+-[Resources](#resources)\
 
 # Summary: 
 
@@ -27,7 +27,7 @@ If you select the github username of an engineer then the user is brought to tha
 
 ![Gif of Use](https://github.com/ZackeryArsement/teamGenerator/blob/main/Assets/images/teamGenerator.gif)
 
--[Walkthrough of Software Use](https://watch.screencastify.com/v/K6KZiN9TaikPg7X2CTBq)
+- ### [Walkthrough of Software Use](https://watch.screencastify.com/v/K6KZiN9TaikPg7X2CTBq)
 
 # Development:
 The Team Generator Application works by providing the user a list of prompts in order to attach information to a newly created Class construct. This Class construct is then pushed into an array of team members. The prompts will change depending on the role of the team member being created, and the user can select the role of a new team member once they complete filling out the information of a team member. The first team member created will always be the manager. Once the user tells the prompt that they would no longer like to add any more team members then the software creates info cards for each team member. These cards are created by mapping through the team member array and pulling the information assigned to each Class construct into a card HTML string. Each card HTML string created is then joined together to create a single HTML string. This single HTML string is then put into a default browser HTML string. Finally 'fs' is used to create a new index.html file using this newly created browser HTML.
@@ -40,7 +40,7 @@ This project uses test to ensure that the javascript runs correctly. There are 4
 
 ![Error Test](https://github.com/ZackeryArsement/teamGenerator/blob/main/Assets/images/teamGeneratorTest.png)
 
--[Walkthrough of Test](https://watch.screencastify.com/v/0E0S1uur7yq5QagP5QGl)
+- ### [Walkthrough of Test](https://watch.screencastify.com/v/0E0S1uur7yq5QagP5QGl)
 
 # Resources
 
