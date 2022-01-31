@@ -7,8 +7,8 @@ function cardHTML(teamMembers) {
         // We change the last listed data parameter depending on the role of the employee
         switch(member.role){
             case 'Manager':
-                return `<div class="card bg-primary m-2" style="width: 18rem;">
-                    <div class="card-body text-white">
+                return `<div class="card bg-light m-2" style="width: 18rem;">
+                    <div class="card-body bg-primary text-white">
                         <h2 class="card-title">${member.name}</h2>
                         <h3 class="card-subtitle">${member.role}</h3>
                     </div>
@@ -19,8 +19,8 @@ function cardHTML(teamMembers) {
                     </ul>
                 </div>`;
             case 'Intern':
-                return `<div class="card bg-primary m-2" style="width: 18rem;">
-                    <div class="card-body text-white">
+                return `<div class="card bg-light m-2" style="width: 18rem;">
+                    <div class="card-body bg-primary text-white">
                         <h2 class="card-title">${member.name}</h2>
                         <h3 class="card-subtitle">${member.role}</h3>
                     </div>
@@ -31,8 +31,8 @@ function cardHTML(teamMembers) {
                     </ul>
                 </div>`;
             case 'Engineer':
-                return `<div class="card bg-primary m-2" style="width: 18rem;">
-                    <div class="card-body text-white">
+                return `<div class="card bg-light m-2" style="width: 18rem;">
+                    <div class="card-body bg-primary text-white">
                         <h2 class="card-title">${member.name}</h2>
                         <h3 class="card-subtitle">${member.role}</h3>
                     </div>

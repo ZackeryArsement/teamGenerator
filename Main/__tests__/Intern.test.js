@@ -11,7 +11,7 @@ describe("Intern", () => {
         });
     });
 
-    describe("getGithub", () => {
+    describe("getSchool", () => {
         // Positive Test
         it("should return the github of an Intern contruct", () => {
             const github = 'UT Austin';
