@@ -17,24 +17,25 @@ addTeamMember('Manager');
 
 // Function that prompts the user to create their list of team members
 function addTeamMember(role){
+    console.log(`Please enter your ${role}\'s information.`);
     // Array of questions for the prompt function to run through
     const arrayQuestions = [
         {
             type: 'input',
             name: 'name',
-            message: 'What is the employee\'s name?',
+            message: `What is the ${role}\'s name?`,
             validate: checkInput
         },
         {
             type: 'input',
             name: 'id',
-            message: 'What is the employee\'s work ID number?',
+            message: `What is the ${role}\'s work ID number?`,
             validate: checkInput
         },
         {
             type: 'input',
             name: 'email',
-            message: 'What is the employee\'s email address?',
+            message: `What is the ${role}\'s email address?`,
             validate: checkEmail
         },
         {
